@@ -1,0 +1,495 @@
+:root {
+    --user-height: 37px;
+}
+
+body {
+    color: #c7d5e0;
+    background: #171a21;
+    font: 95%/1.5 sans-serif;
+}
+
+a {
+    color: #e1c386;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:visited {
+    color: #9e814c;
+}
+
+#user {
+    position: relative;
+    z-index: 2;
+    height: var(--user-height);
+    margin-bottom: -3rem;
+    padding: 6px;
+
+    text-align: right;
+    font-size: 80%;
+}
+#user .avatar {
+    display: inline-block;
+    overflow: hidden;
+    padding: 1px;
+    margin: 0 .5em;
+    line-height: 0;
+    vertical-align: middle;
+
+    background: #3f7085;
+    border: 1px solid #4c92ae;
+}
+
+#header {
+    position: relative;
+    overflow: hidden;
+
+    background: radial-gradient(30% 45% at center 60%, #212329, transparent);
+}
+#header > .title {
+    position: relative;
+    z-index: 1;
+    margin: 0 .2em .16em;
+
+    font: 920% Lobster, cursive;
+    transform: rotate(-1deg);
+}
+#header > .title:before{
+    content: attr(data-title);
+    position: absolute;
+    width: 100%;
+    top: 1px;
+    left: -1px;
+    pointer-events: none;
+
+    text-align: center;
+    background: linear-gradient(179deg, #e6c88a 20%, #665233, #9e814c 90%);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+#lin, #lout {
+    display: none;
+}
+.lout #lout, .lin #lin {
+    display: block;
+    line-height: var(--user-height);
+}
+
+h1 {
+    color: #9e814c;
+
+    text-align: center;
+    text-shadow:
+        0 1px 0 rgb(158, 129, 76),
+        0 2px 0 rgb(143, 116, 70),
+        0 3px 0 rgb(130, 105, 64),
+        0 4px 0 rgb(115, 93, 57),
+        0 5px 0 rgb(102, 82, 51),
+        -1px -1px 1px #fffccc,
+        0 6px 1px rgba(0, 0, 0, 0.0980392),
+        0 0 5px rgba(0, 0, 0, 0.0980392),
+        0 1px 3px rgba(0, 0, 0, 0.298039),
+        0 3px 5px rgba(0, 0, 0, 0.2),
+        0 5px 10px rgba(0, 0, 0, 0.247059),
+        0 10px 10px rgba(0, 0, 0, 0.2),
+        0 20px 20px rgba(0, 0, 0, 0.14902)
+    ;
+}
+
+p {
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+em {
+    font-style: italic;
+}
+
+button {
+    margin: 0 .5em;
+    padding: .3em .7em .4em .6em;
+    border: 1px solid #575a80;
+    line-height: 1;
+
+    color: #97a5cf;
+    background: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background: #272a31;
+}
+
+dl {
+    display: inline-block;
+}
+dt, dd {
+    display: inline;
+}
+dt {
+    font-weight: bold;
+}
+
+td {
+    vertical-align: middle;
+}
+
+table {
+    width: 100%;
+    margin: 2em auto;
+    border-collapse: collapse;
+    line-height: 1.2;
+}
+thead {
+    font-weight: bold;
+}
+thead td {
+    padding-bottom: .5em;
+}
+tbody > tr.a > td:nth-child(n+2),
+.r\&f tr:nth-child(2n-1) > td {
+    background-color: #1a2334;
+}
+tbody > tr.a + tr > td {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+td:nth-child(1) {
+    line-height: 0;
+    text-align: right;
+}
+td:nth-child(1) > a {
+    display: inline-block;
+}
+td:nth-child(2) {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+td:nth-child(3) {
+    padding-right: 10px;
+    white-space: nowrap;
+}
+td.ad {
+    padding-left: 64px;
+}
+
+a.owned {
+    position: relative;
+}
+a.owned > img {
+    opacity: .3;
+}
+a.owned:before {
+    content: attr(data-content);
+    position: absolute;
+    display: block;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    max-width: 0;
+    height: 18px;
+    line-height: 18px;
+    padding-left: 18px;
+    margin-top: -9px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    color: #111;
+    background: #4F95BD url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640">\
+        <path d="M0 0L640 0 640 160 0 160 0 0ZM0 240L640 240 640 400 0 400 0 240ZM0 480L640 480 640 640 0 640 0 480Z"/>\
+        </svg>') no-repeat 5px 50%;
+    background-size: 8px 8px;
+    font-size: 8pt;
+    text-transform: uppercase;
+    transition: max-width .3s, padding .2s;
+}
+a.owned:hover:before {
+    max-width: 100%;
+    padding-right: 5px;
+}
+
+.slogan, .countdown {
+    position: absolute;
+    padding: .6em;
+
+    font: italic 80%/.8 Cousine;
+    color: #babec2;
+    background: #14161a;
+    text-transform: uppercase;
+}
+.slogan {
+    bottom: 0;
+    left: 50%;
+    margin-left: -204px;
+}
+.countdown {
+    right: 50%;
+    bottom: 0;
+    margin-right: -432px;
+}
+@keyframes fadeIn {
+    from { color: rgba(186, 190, 194, .2); }
+}
+.countdown.ready, .countdown.ready > a {
+    animation: fadeIn .75s infinite alternate;
+}
+
+.body {
+    padding: 2em;
+    background: #1b2838;
+}
+
+.page {
+    margin: 0 auto;
+    width: 864px;
+}
+
+.links {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 80%;
+}
+.links a {
+    margin: 0 .5em;
+}
+
+p.note {
+    margin-top: -.75em;
+
+    opacity: .8;
+    font-size: 70%;
+}
+p.note:before {
+    content: 'Note';
+    margin-right: .25em;
+
+    font-size: 90%;
+    text-transform: uppercase;
+    color: #818b91;
+}
+
+.title {
+    vertical-align: middle;
+}
+
+.movement {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 21px;
+    line-height: 21px;
+    margin-right: 1px;
+    vertical-align: middle;
+
+    position: relative;
+    z-index: 0;
+
+    opacity: .9;
+    text-align: center;
+    font-weight: bold;
+    cursor: default;
+}
+.movement.none {
+    color: #b89f76;
+    font-weight: bold;
+}
+.movement.pos, .movement.neg {
+    font-size: 9pt;
+    color: #e7f7c8;
+}
+.movement.neg {
+    color: #f7d3cb;
+}
+
+.movement:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+}
+.movement.new:before {
+    width: 85%;
+    height: 85%;
+    top: 7.5%;
+    left: 7.5%;
+    background: #e6d44e;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.movement.none:before {
+    background: #574d3e;
+    clip-path: inset(14% 14.5%);
+    opacity: .5;
+}
+.movement.pos:before {
+    top: -3px;
+    background: #618037;
+    clip-path: polygon(20% 100%, 20% 50%, 0% 50%, 50% 0%, 100% 50%, 80% 50%, 80% 100%);
+}
+.movement.neg:before {
+    top: 2px;
+    background: #804539;
+    clip-path: polygon(20% 0%, 20% 50%, 0% 50%, 50% 100%, 100% 50%, 80% 50%, 80% 0%);
+}
+
+.genre, .genre:visited {
+    margin-left: .25em;
+    padding: 3px 7px;
+    border-radius: 2px;
+    white-space: nowrap;
+
+    font-size: 11px;
+    color: #67c1f5;
+    background: rgba(103, 193, 245, 0.2);
+}
+.genre:hover {
+    text-decoration: none;
+    color: #e6f7ff;
+    background: rgba(103, 193, 245, 0.5);
+}
+
+.date {
+    margin-left: .25em;
+    font-size: 90%;
+
+    white-space: nowrap;
+    color: #cccecf;
+}
+
+.platforms {
+    margin-left: .25em;
+    vertical-align: sub;
+    vertical-align: -moz-middle-with-baseline;
+    vertical-align: -webkit-baseline-middle;
+    opacity: .3;
+}
+.platforms > span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+.platforms > span[title=Windows]:before {
+    content: url(http://store.akamai.steamstatic.com/public/images/v6/icon_platform_win.png?v=3);
+}
+.platforms > span[title=Mac]:before {
+    content: url(http://store.akamai.steamstatic.com/public/images/v6/icon_platform_mac.png);
+}
+.platforms > span[title=Linux]:before {
+    content: url(http://store.akamai.steamstatic.com/public/images/v6/icon_platform_linux.png);
+}
+.platforms > span[title='HTC Vive']:before {
+    content: url(http://store.akamai.steamstatic.com/public/images/v6/icon_platform_htcvive.png);
+}
+.platforms > span[title='Occulus Rift']:before {
+    content: url(http://store.akamai.steamstatic.com/public/images/v6/icon_platform_oculusrift.png);
+}
+.platforms > span[title='Windows Mixed Reality']:before {
+    content: url(http://store.akamai.steamstatic.com/public/images/v6/icon_platform_windowsmr.png);
+}
+
+.score {
+    font-weight: bold;
+}
+
+.votes {
+    font-size: 85%;
+}
+
+caption {
+    margin-bottom: .5em;
+
+    font-weight: bold;
+}
+
+.r\&f {
+    display: flex;
+}
+.r\&f > * {
+    width: auto;
+}
+.r\&f > :nth-child(2) {
+    margin-left: 1.5em;
+}
+.r\&f img {
+    height: 34px;
+}
+
+.algo {
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 70%;
+    opacity: .1;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+#footer > * {
+    max-width: 18em;
+}
+#footer > :nth-child(n+2) {
+    margin-left: 5%;
+}
+#footer h2 {
+    margin-bottom: .8em;
+}
+#footer p {
+    margin: 1em 0;
+}
+#footer p:last-of-type {
+    margin-bottom: 0;
+}
+#footer p, #footer li {
+    text-align: left;
+    font-size: 80%;
+}
+#footer img {
+    height: 16px;
+    opacity: .65;
+
+    vertical-align: text-top;
+}
+#footer a {
+    color: #9e814c;
+}
+#footer > :nth-child(2) img:first-of-type {
+    margin-right: .25em;
+}
+@media (max-width: 820px) {
+    #footer {
+        flex-direction: column;
+    }
+    #footer > :nth-child(n+2) {
+        margin: 1.5em 0 0;
+    }
+}
+
+.fixedlinks {
+    position: fixed;
+    bottom: .7em;
+    right: 1em;
+}
+.fixedlinks > a {
+    text-transform: uppercase;
+    font-size: 85%;
+    color: inherit;
+    opacity: .15;
+    transition: opacity .1s;
+}
+.fixedlinks > a:hover {
+    opacity: .6;
+    text-decoration: none;
+}
+a[href='#header']:before {
+    content: '▲ ';
+}
+a[href='#footer']:before {
+    content: '▼ ';
+}
