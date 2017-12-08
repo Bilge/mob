@@ -9,7 +9,7 @@ body {
 }
 @media (max-width: 600px) {
     body {
-        font-size: 2.5vw;
+        font-size: 4vw;
     }
 }
 
@@ -159,7 +159,7 @@ thead {
 }
 @media (max-width: 415px) {
     thead {
-        font-size: 80%;
+        /*font-size: 80%;*/
     }
 }
 thead td {
