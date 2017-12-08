@@ -174,8 +174,8 @@ tbody > tr.a > td:nth-child(n+2),
     background-color: #1a2334;
 }
 tbody > tr.a + tr > td {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: .5vmin;
+    padding-bottom: .5vmin;
 }
 td:nth-child(1) {
     line-height: 0;
