@@ -7,6 +7,11 @@ body {
     background: #1b2838;
     font: 95%/1.5 sans-serif;
 }
+@media (max-width: 600px) {
+    body {
+        font-size: 2.5vw;
+    }
+}
 
 a {
     color: #e1c386;
