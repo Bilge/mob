@@ -174,8 +174,8 @@ tbody > tr.a > td:nth-child(n+2),
     background-color: #1a2334;
 }
 tbody > tr.a + tr > td {
-    padding-top: .5vmin;
-    padding-bottom: .5vmin;
+    padding-top: .55vh;
+    padding-bottom: .55vh;
 }
 td:nth-child(1) {
     line-height: 0;
@@ -358,14 +358,27 @@ p.note:before {
     background: #804539;
     clip-path: polygon(20% 0%, 20% 50%, 0% 50%, 50% 100%, 100% 50%, 80% 50%, 80% 0%);
 }
+@media (max-width: 599px) {
+    .movement {
+        width: 17px;
+        height: 16px;
+        line-height: 16px;
+    }
+    .movement.pos:before {
+        top: -2px;
+    }
+    .movement.neg:before {
+        top: 1px;
+    }
+}
 
 .genre, .genre:visited {
     margin-left: .25em;
-    padding: .2em .64em;
+    padding: .2em .6em;
     border-radius: 2px;
     white-space: nowrap;
 
-    font-size: 72.5%;
+    font-size: 70%;
     color: #67c1f5;
     background: rgba(103, 193, 245, 0.2);
 }
