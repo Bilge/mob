@@ -174,8 +174,8 @@ tbody > tr.a > td:nth-child(n+2),
     background-color: #1a2334;
 }
 tbody > tr.a + tr > td {
-    padding-top: .55vh;
-    padding-bottom: .55vh;
+    padding-top: .5vh;
+    padding-bottom: .5vh;
 }
 td:nth-child(1) {
     line-height: 0;
@@ -318,7 +318,7 @@ p.note:before {
     font-weight: bold;
 }
 .movement.pos, .movement.neg {
-    font-size: 9pt;
+    font-size: 79%;
     color: #e7f7c8;
 }
 .movement.neg {
@@ -360,9 +360,9 @@ p.note:before {
 }
 @media (max-width: 599px) {
     .movement {
-        width: 17px;
-        height: 16px;
-        line-height: 16px;
+        width: 14px;
+        height: 14px;
+        line-height: 14px;
     }
     .movement.pos:before {
         top: -2px;
