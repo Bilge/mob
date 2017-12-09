@@ -111,9 +111,10 @@ h1 {
 }
 
 p {
-    margin: 2.5vh auto;
-    text-align: center;
     max-width: 34em;
+    margin: 2.5vh auto;
+
+    text-align: center;
 }
 
 em {
@@ -374,7 +375,7 @@ p.note:before {
 
 .genre, .genre:visited {
     margin-left: .25em;
-    padding: .2em .6em;
+    padding: .19em .6em;
     border-radius: 2px;
     white-space: nowrap;
 
@@ -390,7 +391,7 @@ p.note:before {
 
 .date {
     margin-left: .25em;
-    font-size: 90%;
+    font-size: 85%;
 
     white-space: nowrap;
     color: #cccecf;
@@ -439,7 +440,7 @@ p.note:before {
 }
 
 .rating, .votes {
-    font-size: 85%;
+    font-size: 80%;
 }
 .votes {
     display: inline-block;
